@@ -1,2 +1,2 @@
 # JavaScript
-Learning as well as Projects Directory.
+JavaScript Learning as well as Projects Directory.

@@ -1,0 +1,95 @@
+==========================================================================
+			            Counter Using Javascript
+==========================================================================
+				                  HTML PART
+==========================================================================
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashlok Index</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <label id="counterlabel">0</label><br>
+    <div id="control_panel">
+        <button class="animated-button" id="increase">+</button>
+        <button class="animated-button" id="reset">Reset</button>
+        <button class="animated-button" id="decrease">-</button>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
+==========================================================================
+				                  CSS PART
+==========================================================================
+* {
+    background-color: black;
+}
+
+#counterlabel {
+    color: white;
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+#control_panel {
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+#increase,
+#reset,
+#decrease {
+    background-color: white;
+    color: red;
+}
+
+.animated-button {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.animated-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+}
+==========================================================================
+			                  JavaScript PART
+==========================================================================
+let count = 0;
+
+document.getElementById("decrease").onclick = function () {
+    count -= 1;
+    document.getElementById("counterlabel").innerHTML = count;
+}
+document.getElementById("increase").onclick = function () {
+    count += 1;
+    document.getElementById("counterlabel").innerHTML = count;
+}
+document.getElementById("reset").onclick = function () {
+    count = 0;
+    document.getElementById("counterlabel").innerHTML = count;
+}
+==========================================================================

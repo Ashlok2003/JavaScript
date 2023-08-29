@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX 2 - LOCAL JSON</title>
+    <style>
+        h1 {
+            font-style: italic;
+            background-color: aqua;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 700;
+        }
+    </style>
+    <!-- Fetching JSON File content -->
+</head>
+
+<body>
+    <button id="button1">Get User</button>
+    <button id="button2">Get Users</button>
+    <br><br>
+    <h1>User</h1>
+    <div id="user"></div>
+    <h1>Users</h1>
+    <div id="users"></div>
+
+    <script>
+        document.getElementById('button1').addEventListener('click', loaduser);
+        document.getElementById('button2').addEventListener('click', loadusers);
+
+        (function () {
+            console.log("Happy Learning Javascript (^_^)");
+        })()
+
+        function loaduser() {
+            var xhr = new XMLHttpRequest();
+            // open -> type url/file async 
+            xhr.open('GET', 'user.json', true);
+
+            xhr.onload = function () {
+                if (this.status == 200) {
+                    // simply parse the JSON data to get the object of the response data. :)
+                    var user = JSON.parse(this.responseText);
+
+                    var output = '';
+                    output += '<ul>' +
+                        '<li>ID: ' + user.id + '</li>' +
+                        '<li>NAME: ' + user.name + '</li>' +
+                        '<li>EMAIL: ' + user.email + '</li>' +
+                        '</ul>';
+
+                    document.getElementById('user').innerHTML = output;
+                }
+            }
+
+            xhr.send();
+        }
+
+        function loadusers() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'users.json', true);
+
+            xhr.onload = function () {
+                if (this.status == 200) {
+                    var users = JSON.parse(this.responseText);
+
+                    var output = '';
+
+                    users.forEach(user => {
+                        output += `<ul>
+                            <li>ID: ${user.id}</li>
+                            <li>NAME: ${user.name}</li>
+                            <li>EMAIL: ${user.email}</li>
+                        </ul><br>`;
+                    });
+
+                    document.getElementById('users').innerHTML = output;
+
+                }
+            }
+
+            xhr.send();
+        }
+
+    </script>
+</body>
+
+</html>

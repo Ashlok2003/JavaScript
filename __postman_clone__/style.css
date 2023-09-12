@@ -1,0 +1,7 @@
+.navbar {
+    font-style: italic;
+    font-weight: 700;
+}
+.navbar-nav .nav-link {
+    color: #fff; /* Set the text color to white */
+}

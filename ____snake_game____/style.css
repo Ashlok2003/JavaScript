@@ -1,0 +1,121 @@
+@font-face {
+    font-family: ashlok;
+    src: url(./Heading-Now-Variable.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ashlok;
+    font-stretch: 360%;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #91AF03;
+}
+
+/*Rememeber to add responsiveness to you website :) */
+
+.loader {
+    height: 100vh;
+    width: 100vw;
+    color: green;
+    background-color: #71da38;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.display {
+    height: 100vh;
+    width: 50vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-image: url('./loader.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    font-size: 40px;
+}
+
+
+.main .loader h1 {
+    margin-top: 900px;
+}
+
+.body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('./bgimage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+#board {
+    height: 75vh;
+    width: 40vw;
+    background: lightgreen;
+    background-image: url('./xc.png');
+    background-image: url('./xc.png'), linear-gradient(lightgreen, yellow);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 25px;
+    margin-right: 60px;
+    border: 2px solid black;
+    display: grid;
+    /*Below line will help us to define the grid i.e 18 * 18 here in this case
+        rows and column */
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}
+
+#scoreBox {
+    height: 8vh;
+    width: 40vw;
+    margin-right: 60px;
+    color: white;
+    background-color: crimson;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+
+#scoreBox,
+#scoreValue {
+    font-size: 50px;
+    font-family: ashlok;
+    font-weight: 700;
+}
+
+.head {
+    background: orangered;
+    border: 2px solid purple;
+    transform: scale(1.02);
+    border-radius: 12px;
+}
+
+.snake {
+    background-color: purple;
+    border: .25vmin solid white;
+    border-radius: 12px;
+}
+
+.food {
+    background-color: crimson;
+    border: .25vmin solid black;
+    border-radius: 12px;
+}

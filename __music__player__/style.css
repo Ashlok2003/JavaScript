@@ -1,0 +1,321 @@
+@font-face {
+    font-family: ashlok;
+    src: url(./Heading-Now-Variable.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px;
+    background-image: url('./bacgriund.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    overflow: hidden;
+}
+
+
+.main .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .nav img {
+    height: 7vh;
+    width: 10vw;
+}
+
+.main .nav #logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.main .nav {
+    font-size: 70px;
+    font-stretch: 360%;
+    font-family: ashlok;
+    height: 8vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: orange; */
+    padding: 0 80px;
+}
+
+.main .center .section1 {
+    height: 88vh;
+    width: 40vw;
+    /* background-color: red; */
+}
+
+.main .center .section2 {
+    height: 88vh;
+    width: 60vw;
+    /* background-color: yellow; */
+}
+
+.main .footer {
+    height: 8vh;
+    width: 100vw;
+    /* background-color: green; */
+}
+
+.section1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./pphone.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: 900px;
+}
+
+.section2 .window {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: row;
+}
+
+.section2 .window #album {
+    height: 50vh;
+    width: 50vh;
+    margin-top: 12%;
+    margin-left: 12%;
+    background-image: url('./default.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+    position: relative;
+    border-radius: 50px;
+    /* Add position: relative; for z-index to work */
+}
+
+.section2 .window #disk {
+    height: 48vh;
+    width: 48vh;
+    background-image: url('./disk.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute;
+    /* Add position: absolute; to position the disk within the album */
+    top: 50%;
+    /* Center the disk vertically within the album */
+    left: 70%;
+    /* Center the disk horizontally within the album */
+    transform: translate(-50%, -50%);
+    /* Center the disk precisely within the album */
+}
+
+.section1 #phone {
+    height: 71vh;
+    width: 16.5vw;
+    font-size: 60px;
+    display: grid;
+    /*Below line will help us to define the grid i.e 18 * 18 here in this case
+        rows and column */
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    color: black;
+    background-color: #fff;
+    margin-top: 120px;
+    margin-right: 90px;
+    border-top-left-radius: 10px;
+    /* Top-left corner */
+    border-top-right-radius: 20px;
+    /* Top-right corner */
+    border-bottom-left-radius: 100px;
+    /* Bottom-left corner */
+    border-bottom-right-radius: 110px;
+    /* Bottom-right corner */
+
+}
+
+
+.bottom {
+    height: 20vh;
+    width: 20vw;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    margin-left: 500px;
+}
+
+.bottom .loader {
+    width: 100%;
+    height: 20px;
+    /* Height of the progress bar */
+    background-color: orangered;
+    /* Progress bar background color */
+    position: relative;
+    margin: 0 auto;
+}
+
+.bottom #controller {
+    margin-top: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+
+}
+
+.bottom #controller button {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background-color: #fff;
+}
+
+.bottom .loader .progress-bar {
+    height: 100%;
+    width: 0;
+    /* Initial width of the progress bar (0%) */
+    background-color: #fff;
+    /* Progress bar color */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.1s;
+    border-radius: 20px;
+    /* Smooth transition for the progress bar */
+}
+
+.bottom img {
+    height: 250px;
+    width: 250px;
+}
+
+/* Define a grid layout for the #phone container (same as before) */
+#phone {
+    font-size: 70px;
+    font-stretch: 360%;
+    font-family: ashlok;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Style for each section within the grid (same as before) */
+.grid-section {
+    /* background-color: #f0f0f0; */
+    /* padding: 20px; */
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+}
+
+.box {
+    height: 10.5vh;
+    width: 15.5vw;
+
+    /* background-color: #ff5733; */
+   /*  border: 10px solid white; */
+    border-radius: 40px;
+    transition: transform 0.2s ease;
+    /* Add a transition for smoother animation */
+}
+
+#track1 {
+    background-image: url('./label1.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#track2 {
+    background-image: url('./label2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#track3 {
+    background-image: url('./label3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#track4 {
+    background-image: url('./label4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#track5 {
+    background-image: url('./label1.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#track6 {
+    background-image: url('./label3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#track7 {
+    background-image: url('./label4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#track8 {
+    background-image: url('./label1.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+button {
+    font-size: 50px;
+    font-family: ashlok;
+    font-stretch: 360%;
+    color: #fff;
+}
+
+
+/* Style for the scrollable list */
+.scrollable-list {
+    max-height: 62vh;
+    /* Set a maximum height for the list to enable scrolling */
+    overflow: hidden;
+    /* Enable vertical scrolling when the list overflows */
+}
+
+.scrollable-list:hover {
+    overflow-y: auto;
+    /* Show scrollbar only on hover */
+}

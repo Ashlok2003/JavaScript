@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Josefin+Sans:ital@1&family=Roboto:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+    color: var(--font-color);
+    background-color: var(--background-color);
+    font-family: var(--font-stack);
+}
+
+/*======================CSS Varaibles and Modules===================*/
+
+:root {
+    --search-bar-border: #e6e6e6;
+    --stats-color: #70757a;
+    --clear-button-color: #d9d9d9;
+    --background-color: #fff;
+    --font-color: #000;
+    --logo-blue: #4885ed;
+    --logo-red: #db3236;
+    --logo-yellow: #ffc107;
+    --logo-green: #3cba54;
+    --link-color: #1a0dab;
+    --link-visited-color: #609;
+    --link-outline-color: #000;
+    --font-stack: "Roboto", Arial, sans-serif;
+}
+
+.blue {
+    color: var(--logo-blue);
+}
+
+.red {
+    color: var(--logo-red);
+}
+
+.yellow {
+    color: var(--logo-yellow);
+}
+
+.green {
+    color: var(--logo-green);
+}
+
+.exclaim {
+    display: inline;
+    font-size: 2.5rem;
+    transform: rotate(45deg);
+}
+
+
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+.none {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.Flex {
+    display: flex;
+    align-items: center;
+}
+
+
+.Flex-column {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.Flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*=============================Normal Modules Allignment=================================*/
+
+img {
+    display: block;
+}
+
+main {
+    min-height: calc(100vh - 60px);
+}
+
+footer {
+    width: 100%;
+    height: 60px;
+}
+
+footer p {
+    color: var(--stats-color);
+    font-size: 0.5rem;
+}
+
+/*================================Search Entry Part====================================*/
+.searchEntry {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.searchEntry .logo {
+    letter-spacing: -5px;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+
+}
+
+.searchEntry .searchBar {
+    width: 90vw;
+    display: flex;
+    border: 2px solid var(--search-bar-border);
+    border-radius: 500px;
+    padding: 0.15rem 0.25rem 0.15rem 0.75rem;
+}
+
+.searchEntry input {
+    flex-grow: 1;
+    font-size: 0.75rem;
+    text-align: left;
+    letter-spacing: 0.1rem;
+    border: 0;
+    outline: none;
+    min-width: 150px;
+}
+
+.searchEntry button {
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    min-width: 48px;
+    min-height: 48px;
+    outline: none;
+}
+
+.searchEntry button i {
+    font-family: 'Font Awesome 5 Free';
+    font-size: 1rem;
+}
+
+.searchEntry button:hover i,
+.searchEntry button:focus i {
+    padding-bottom: 0.5rem;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+
+}
+
+.searchbutton:hover i,
+.searchbutton:focus i {
+    color: var(--logo-green);
+}
+
+.clear:hover i,
+.clear:focus i {
+    color: var(--logo-red);
+}
+
+.clear {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    color: var(--stats-color);
+    border-right: thin solid var(--clear-button-color);
+}
+
+.searchBar:hover,
+.searchBar:focus-within {
+    box-shadow: 0 2px 5px 2px var(--search-bar-border);
+}
+
+/*================================Search Reasult Part====================================*/
+.results {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    width: 90vw;
+}
+
+.statsBar {
+    width: 100%;
+
+}
+
+.statsBar .stats {
+    color: var(--stats-color);
+    font-size: 0.5rem;
+}
+
+
+.searchResults {
+    width: 100%;
+
+}
+
+.searchResults .resultItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.25rem 0;
+}
+
+.searchResults .resultItem .resultTitle {
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 0.25rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 3px 2px;
+}
+
+.searchResults .resultItem .resultTitle a {
+    color: var(--link-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.searchResults .resultItem .resultTitle a:visited {
+    color: var(--link-visited-color);
+}
+
+.searchResults .resultItem .resultTitle a:hover {
+    text-decoration: underline;
+}
+
+.searchResults .resultItem .resultTitle a:focus {
+    outline: 2px solid var(--link-outline-color);
+}
+
+
+.searchResults .resultItem .resultContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchResults .resultItem .resultContent .resultImage {
+    margin-right: 0.5rem;
+
+}
+
+.searchResults .resultItem .resultContent .resultText {
+    flex-grow: 1;
+    font-size: 14px;
+    line-height: 20px;
+    max-height: 60px;
+    padding-left: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*================================Responiveness====================================*/
+
+@media only screen and (min-width: 768px) {
+    .searchResults .resultItem .resultContent .resultText {
+        font-size: 1rem;
+        line-height: 28px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .searchResults .resultItem .resultTitle {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .searchResults .resultItem {
+        padding: 0.5rem 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .statsBar .stats {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .results {
+        width: 75vw;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .results {
+        width: 55vw;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .clear {
+        padding: 0 1rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .searchbutton {
+        padding-left: 1rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .searchEntry button i {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .searchEntry input {
+        font-size: 1.25rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .searchEntry .searchBar {
+        width: 80vw;
+        padding: 1.25rem 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .searchEntry .searchBar {
+        width: 60vw;
+
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .searchEntry .logo {
+        font-size: 4rem;
+        letter-spacing: -10px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    footer p {
+        font-size: 1rem;
+    }
+
+    footer p a {
+        color: var(--stats-color);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .exclaim {
+        font-size: 5rem;
+    }
+}
+
+/*=================================================================================*/

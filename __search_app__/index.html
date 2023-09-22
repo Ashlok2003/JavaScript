@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEARCH-X</title>
+    <link rel="icon" href="./ICon.jpg">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome CDN Integration -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <main class="Flex-column">
+        <!-- Aria label = when screen reader is on then the default text will be readed by the screen reader
+         Aria hidden = when use aria-hidden="true" on any element that is not focusable and does not contain any focusable element 
+                    itself, you must never use it on focusable elements.
+            -->
+        <h1 class="offscreen">Search X - A Wikipedia Powered Search Engine</h1>
+
+        <!-- Search Section Start Here -->
+        <section class="searchEntry">
+
+            <h2 class="offscreen">Search Term Entry</h2>
+            <div class="logo" aria-hidden="true">
+
+                <span class="blue">S</span>
+                <span class="red">e</span>
+                <span class="yellow">a</span>
+                <span class="blue">r</span>
+                <span class="green">c</span>
+                <span class="red">h</span>
+                <span class="black">X</span>
+                <span class="exclaim"><i>!</i></span>
+
+            </div>
+
+            <form action="" class="searchBar" id="searchBar">
+                <label for="search" class="offscreen">Enter a Search Term or Phrase</label>
+                <input type="text" id="search" autocomplete="off">
+
+                <div id="clear" class="none button clear" role="button" tabindex="0" aria-label="Clear search terms">x
+                </div>
+
+                <button id="searchbutton" class="button searchButton" type="submit" aria-label="Submit button">
+                    <i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </section>
+        <!-- Search Section Ends Here -->
+
+
+        <!-- Result section starts here-->
+        <section class="results">
+            <h2 class="offscreen">Search Results</h2>
+            <div class="statsBar">
+
+                <!-- aria-live = ”assertive" — 
+                            This setting tells the screen reader that the information is critically important 
+                            or time sensitive. -->
+
+                <div id="stats" class="stats" aria-live="assertive"></div>
+            </div>
+            <div id="searchResults" class="searchResults">
+                <div class="resultItem">
+                    <div class="resultTitle"> <a href="https://github.com/Ashlok2003">Ashlok Chaudhary </a></div>
+
+                    <div class="resultContent">
+                        <div class="resultImage">
+                            <img src="./search_logo-removebg.png" alt="Dachshund" height="100px" width="100px">
+                        </div>
+                        <div class="resultText">
+
+                            <p class="resultDescription">🌱 I'm currently on an exciting journey of learning Web
+                                Development and Data Structures & Algorithms (DSA). 🔭
+                                ⚡ This is One of My Creation 😄
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Result section ends here-->
+    </main>
+    <footer class="Flex-center">
+        <p><span aria-hidden="true">&lt;&lt;&nbsp;</span>Powered By Wikipedia<span
+                aria-hidden="true">&nbsp;&gt;&gt;</span>
+        </p>
+    </footer>
+
+
+    <script src="main.js" type="module"></script>
+
+</body>
+
+</html>

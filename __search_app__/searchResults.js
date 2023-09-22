@@ -94,19 +94,3 @@ export const setStatsLine = (numberofResults) => {
     }
 };
 
-
-
-/*
-                    
-<div class="resultItem">
-    <div class="resultTitle"> <a href="">${result.title} </a></div>                        
-        <div class = "resultText">
-            <img src = ${result.img} alt= "">
-        </div>
-        <div class = "resultText">
-            <p>${result.text}</p>
-        </div>
-    </div>
-</div>
-            
-*/

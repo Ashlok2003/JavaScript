@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Covid-19 Tracker</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./logo.png" alt="">
+            <p>COVID - 19 STATS</p>
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="stats">
+            <div class="latest-report">
+                <div class="country">
+                    <div class="name">Loading....</div>
+                    <div class="change-country">Change</div>
+                    <div class="search-country hide">
+                        <div class="search-box">
+                            <input type="text" id="search-input" placeholder="Search Country...">
+                            <img class="close" src="./close.svg" alt="">
+                        </div>
+                        <div class="country-list">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="total-cases">
+                    <div class="title">
+                        Total Cases
+                    </div>
+                    <div class="value">0</div>
+                    <div class="new-value">+0</div>
+                </div>
+
+                <div class="recovered">
+                    <div class="title">
+                        Recovered
+                    </div>
+                    <div class="value">0</div>
+                    <div class="new-value">+0</div>
+                </div>
+                <div class="deaths">
+                    <div class="title">
+                        Death Cases
+                    </div>
+                    <div class="value">0</div>
+                    <div class="new-value">+0</div>
+                </div>
+
+            </div>
+            <div class="chart">
+                <canvas id="axes_linear_chart">
+                </canvas>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+    <script src="./countries.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>

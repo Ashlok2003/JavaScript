@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- JQuery CDN (Content Delivery Network) Integration -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div class="container">
+
+    </div>
+    <div class="custom-container">
+
+    </div>
+    <div class="container2">
+        <h2>Hello Ashlok</h2>
+        <h3>Tillu Ke papa</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam aperiam amet ipsum, nobis ipsam perferendis
+            aspernatur deleniti culpa soluta harum aliquid exercitationem pariatur hic voluptas vitae ea ratione
+            necessitatibus mollitia sapiente incidunt qui, vel excepturi dolor. Numquam corrupti soluta nihil.</p>
+    </div>
+
+    <button>Click Me</button>
+    <!------------------------------------------------------------------------------------>
+    <h2>jQuery Selectors</h2>
+
+    <a href="#" target="_blank">Link 1</a>
+    <a href="#" target="_self">Link 2</a>
+    <a href="#" target="_blank">Link 3</a>
+    <input type="text" name="username">
+
+
+    <ul class="item-list">
+        <li class="item">
+            <a href="http://www.google.com">Outside</a>
+            <div><a href="#">Inside</a></div>
+        </li>
+        <li class="item"><a href="">Milk</a></li>
+        <li class="item"><a href="">Chocholate</a></li>
+        <li class="item"><a href="">Faluda</a></li>
+    </ul>
+    <hr>
+
+    <!---------------------Traversing The DOM Using JQuery-------------------------------->
+    <ul class="list-item">
+        <li class="item"><a href="http://www.google.com">Ashlok</a></li>
+        <li class="item"><a href="http://www.github.com">Chaudhary</a></li>
+        <li class="item"><a href="http://www.facebook.com">Is Super Great </a></li>
+        <li class="item"><a href="http://www.instagram.com">Happy Gandhi Jayanti</a></li>
+    </ul>
+    <button class="myButton">Click Me</button>
+    <hr>
+    <!------------------------Content Manupulations-------------------------------------->
+    <input type="text" id="content_manupulate">
+    <div class="result"></div>
+    <br>
+    <div>
+        <div class="color-box after">After</div>
+        <div class="color-box before">Before</div>
+        <div class="color-box append">Append</div>
+        <div class="color-box prepend">Prepend</div>
+    </div>
+    <a href="http://www.google.com/github" target="_ashlok_chaudhary">Hello World!</a>
+    <a href="" target="_ashlok">How Are You</a>
+    <a href="" target="_chaudhary">I 'm Good and Learning JQuery</a>
+    <br>
+    <button class="click">Click me</button>
+    <button class="link-btn">Link Button</button>
+    <hr>
+    <br>
+    <!--------------------------Attributes Operations Here ------------------------------->
+    <div class="present checked" id="myDivision">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nulla, quaerat praesentium maiores, aliquam
+        laudantium repudiandae excepturi, assumenda perferendis ipsam impedit corporis consequuntur illum distinctio
+        nemo omnis error mollitia suscipit vitae delectus est minima. Eaque nemo ipsam nesciunt. Quos, perspiciatis.
+    </div>
+    <!----------------------------Copying Elements---------------------------------------->
+    <a href="http://www.twitter.com/ashlok2003" target="_blank" id="master">Ashlok_Twitter_Handle</a>
+    <button class="copyingButton">Copy It!</button>
+    <!---------------------------Moving Elements----------------------------------------->
+    <!-- Moving Paragraph from box 1 to box 2 refer Jquery Code Below -->
+    <div class="box1" style="background-color: red; height: 200px;width: 200px; color: #000;">
+        <p class="textcontent">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem tenetur, odit sint, sit nesciunt
+            reiciendis ut illo doloremque fuga maxime a. Impedit reprehenderit dolor adipisci quo odio debitis ut error?
+        </p>
+    </div>
+    <div class="box2" style="background-color: yellow; height: 200px;width: 200px; color: #fff;">
+
+    </div>
+    <!----------------Setting Data And Accesssing it-------------------------------------->
+    <div class="ashlok"></div>
+    <button id="btn1">Adding Data To The DIV</button>
+    <button id="btn2">Accessing The Data From The DIV</button>
+    <!-----------------------jQuery Effects ==========------------------------------------>
+
+    <div class="show_hide">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos temporibus quam, sit ab earum doloremque,
+        possimus illum ipsa asperiores, eaque officia excepturi facere. Commodi sequi reiciendis veniam, voluptas beatae
+        inventore.
+    </div>
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+    <button id="toggle">Toggle</button><br><br><br>
+    <!-------------------------Animation Effects ----------------------------------------->
+    <button class="animation_btn1">IN Button</button>
+    <button class="animation_btn2">OUT Button</button>
+    <div class="animation">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sit tempore quasi dolor quam, voluptate porro,
+        doloremque soluta quia saepe itaque hic rem, dolore aliquam reprehenderit cupiditate incidunt. Voluptatum sit
+        aut natus sunt voluptatem ab totam maiores ea doloribus sed ratione non quos consectetur similique, dolor,
+        obcaecati, soluta quas porro!
+    </div>
+
+    <!------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------>
+
+
+    <script>
+        $(document).ready(() => {
+            /* 
+            $('button').click(() => {
+                $('.container').append("<h2> This is sample insertion inside Container Section !</h2>")
+            }) 
+            */
+            /* Chaining the Jquery Functions */
+            $('.container').text("Ashlok Chaudhary").css('color', 'red').fadeIn('100');
+            $('.container2').css('color', 'purple').css('font-size', '20px').css('font-weight', '900');
+
+            $('button').dblclick(() => {
+                /* Passing the whole css object to implement the all changes */
+                $('.container2').css({ 'background-color': 'yellow', 'color': 'white', 'font-weight': '700' });
+            })
+
+            /* Custome jQuery Function */
+
+            $.fn.customFunction = function (newText) {
+                return this.each(function () {
+                    $(this).text(`${newText} is Adding inside the Custom Container !`).css({ 'background-color': 'orange', 'color': 'white', 'font-weight': '700' });
+                });
+            };
+            /* Applying the function method to the container */
+            $('.custom-container').customFunction('Ashlok right now');
+
+            // Attribute Selectors in JQuery
+
+            $("input[type = 'text']").css('border', "9px solid red");
+
+            $("a[target = '_blank']").each(function () {
+                $(this).append(" [new window]");
+            })
+
+            // Universal selector
+            /* $('*').css('background-color', 'black'); */
+
+            $('.item-list > li:nth-child(1) > a').css('color', 'yellow');
+            $('.item-list > li:eq(3) > a').css('color', 'yellow');
+            $('a:not([href="http://www.google.com"])').css('background-color', 'white');
+            /*---------------------------------------------------------------------------------*/
+            /*-----------------------Traversing The DOM Using JQuery---------------------------*/
+
+            $('.myButton').click(() => {
+                $('.list-item > li').find('a[href="http://www.google.com"]').css('background-color', 'red');
+            });
+
+            $('a[href="http://www.github.com"]').closest('ul').css('border', '2px dashed black');
+            $('a[href="http://www.facebook.com"]').parent().css('background-color', "purple");
+
+            $('.after').css({ 'background': 'red', 'height': '300px', 'width': '300px', 'color': '#fff', 'font-size': '30px' });
+            $('.before').css({ 'background': 'orange', 'height': '300px', 'width': '300px', 'color': '#fff', 'font-size': '30px' });
+            $('.prepend').css({ 'background': 'yellow', 'height': '300px', 'width': '300px', 'color': '#fff', 'font-size': '30px' });
+            $('.append').css({ 'background': 'cyan', 'height': '300px', 'width': '300px', 'color': '#fff', 'font-size': '30px' });
+
+            /*----------------------Content Manupulations--------------------------------------*/
+            $('.click').click(() => {
+                $('.result').append(`${$('#content_manupulate').val()}`);
+            });
+            $('.after').click(() => {
+                $('.after').append('<div class = "color-box attached">Attached</div>');
+                $('.attached').css({ 'background': 'black', 'height': '300px', 'width': '300px', 'color': '#fff' });
+            })
+            $('.before').click(() => {
+                $('.before').before('<div class = "color-box attached">Attached</div>');
+                $('.attached').css({ 'background': 'black', 'height': '300px', 'width': '300px', 'color': '#fff' });
+            })
+            $('.append').click(() => {
+                $('.append').append('<div class = "color-box attached">Attached</div>');
+                $('.attached').css({ 'background': 'black', 'height': '300px', 'width': '300px', 'color': '#fff' });
+            })
+            $('.prepend').click(() => {
+                $('.prepend').prepend('<div class = "color-box attached">Attached</div>');
+                $('.attached').css({ 'background': 'black', 'height': '300px', 'width': '300px', 'color': '#fff' });
+            })
+
+            $('.link-btn').click(() => {
+                /* Sets or change the attributes of the elemts*/
+                console.log($('a[href="http://www.google.com/github"]').attr('target'));
+                $('a[href="http://www.google.com/github"]').attr('target', '_ashlok');
+                console.log($('a[href="http://www.google.com/github"]').attr('target'));
+            });
+
+            /*-----------------------Attributes Example Code is Done---------------------------*/
+
+            console.log($('#myDivision').hasClass('checked'));
+            $('#myDivision').addClass('unchecked');
+            $('#myDivision').removeClass('checked');
+            $('#myDivision').removeAttr('name');
+            $('#myDivision').removeClass('checked').toggleClass('checked').toggleClass('unchecked');
+
+            /*-------------------------Copying Elements----------------------------------------*/
+            $('.copyingButton').click(() => {
+                $('#master').clone(true).insertAfter('a[href="http://www.twitter.com/ashlok2003"]');
+            });
+
+            /* When you clone an element it dont clone the events attached with that element
+                Even to also clone the events associated with it simpily pass boolean 'true' inside clone() */
+
+            /*-------------------------   Moving Elements  ------------------------------------*/
+            /* Both methods are doing same thing but have different methodology */
+            $('.box2').append($('.box1 > p'));
+            setTimeout(() => {
+                $('.box2 > p').appendTo($('.box1'));
+            }, 2000);
+            /*-------------------- .each() methods in JQuery-----------------------------------*/
+            let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            $.each(arr, (x, value) => {
+                console.log('Index , value', { x, value });
+            })
+            $('.list-item > li > a').each(function (index, element) {
+                console.log($(this).text());
+            })
+            $('.list-item > li').filter('.item').css('color', 'green');
+            $('.list-item').has('li').css('background', 'cyan');
+            $('.list-item').not('.middle').css('color', 'red');
+            /*---------------------------Data Adding and Accessing-----------------------------*/
+            $('#btn1').click(() => {
+                $('.ashlok').data({ 'age': 20, "Gender": 'Male' });
+            });
+            $('#btn2').click(() => {
+                console.log($('.ashlok').data('age'));
+                console.log($('.ashlok').data('Gender'));
+            });
+            /*-------------------------JQuery Effects -----------------------------------------*/
+
+            /* $('#show').click(() => {
+                $('.show_hide').show(400);
+            });
+            $('#hide').click(() => {
+                $('.show_hide').hide(1500);
+            }); */
+            $('#toggle').click(() => {
+                $('.show_hide').toggle('slow', () => {
+                    $('.show_hide').text('Transaction Completed');
+                })
+            })
+            $('#show').dblclick(() => {
+                $('.show_hide').fadeIn(100);
+            });
+            $('#hide').dblclick(() => {
+                $('.show_hide').fadeOut(100);
+            });
+
+            /*------------------------Animation Effects ---------------------------------------*/
+            $('.animation_btn1').click(() => {
+                $('.animation').animate({
+                    width: '60%',
+                    fontSize: '5em',
+                    height: '200px',
+                    opacity: '0.8',
+                    marginTop: '40px',
+                    marginLeft: '50px',
+                }, 1000, function () {
+                    alert("The Animation has been finshed !");
+                });
+            });
+            $('.animation_btn2').click(() => {
+                $('.animation').animate({
+                    width: '20%',
+                    fontSize: '2em',
+                    height: '50px',
+                    opacity: '0.8',
+                    marginTop: '40px',
+                    marginLeft: '50px',
+                    borderWidth: '1px'
+                }, 1500);
+            });
+            
+
+        })
+    </script>
+</body>
+
+</html>
+<!-- 
+        =============== CSS Selectors ================
+        . TagName selectors
+        . ID selectors
+        . Class selectors
+        . Pseudo - Class Selectors
+        . Selectors based on relationships
+        . Attribute Selectors
+        . Multiple Selectors
+        ==============================================
+
+        ====================Traversing The DOM Using JQuery======================
+
+        find()      : Find all matching elements
+        children()  : it is same as find, but moves only one level down
+        closest()   :  Moves up the DOM tree, until it finds the matching element
+        parent()    : Parent also moves up the DOM tree but to a single level
+        next()      : moves down the targer the immediately following siblings
+        prev()      : moves just like .nex() but in reverse iterative manner targeting the immediately preceding siblings
+        siblings()  : It Targets move up and down, targeting all siblings
+        first()     : Gets the first elements from the selected set
+        last()      : Gets the last elements from the selected set.
+
+        Some more examples :---?
+
+        $elements).eq(Integer);
+                    : selects the elements present on an specifc index position
+        $(elements).filter('.filtered-element');
+                    : It reduces the set of matched elements to those that match the provided selector.
+        $(elements).not('.not-this-element');
+                    : This method removes elements from the set of matched elements that match the provided selector.
+        $(elements).has('.descendant-element');
+                    : It selects elements that have at least one descendant matching the provided selector.
+        
+        =========================Manupulating the DOM Elements=====================
+
+        * Manupulate elements's content
+        * Add / Remove DOM Elements
+        * Modify an Existing Elements
+        * Copy / Clone an Element
+        * Add / Remove / Modify elements attributes
+
+        Content manupulation : text(), html(), val() are the three methods to achive this.
+
+        Adding and removing DOM elements: --?   after(), before(), append(), prepend(), remove()
+        
+        ========================Modifying Properties & Attributes=================================
+
+        . removeAttr(name)      :   Removes an attribute fom the selected element
+        . hasClass(class)       :   This method checks wheather the selected element contains the specific class
+        . addClass(class)       :   Adds a class defined in css to the matched object
+        . removeClass(class)    :   Remove the class from the set of selected elements
+        . toggleClass(class)    :   Adds the class if it is not present, removes the class if it is present
+        . prop()                :   Similar to attr() but attr() is internally calling him as to achive the functionality.
+        . attr() :- [attr('specific'), attr('target', 'value')] =>
+                        calls .prop() internally so .attr() method will be slightly slower than accessing
+                        them directly through .prop()
+
+        ==============================Copying Elements==================================================
+
+        clone()  = It is used to copy a matched Elements
+
+        ===========================   Jquery Events ====================================================
+
+        .show() & .hide()   :   Genrally use to hide & show the elements.
+        Speed()             :   It Takes the three predefined speeds/parameters ('slow', 'normal', 'fast').
+        callback()          :   The function executed after the animation is completed.
+
+
+        Few other effects options avialable for animations :
+        . fadeIn()                          : Fade in all the selected elements by adjusting css opacity
+        . fadeOut()                         : Fade out all the selected elements by css opacity
+        . fadeTo(speed, opacity, callback)  : These methods add css opacity specified in the parameter
+        . slideDown()                       : Adds height to the div from 0 to div's orignal height with slide effect
+        . slideUp()                         : Hides the div with height and slide effect
+        . slideToggle()                     : Toggle the visibility of the selected elements with adding height and slide effect
+
+        ================================= JQuery Animate ===========================================================
+        .animate() => Helps us to provide the animation to the certain elements.
+
+        Parameters it Takes:
+            * Properties    - It Takes CSS Properties and applies on element to make our animation
+            * Duration      - It takes time in milliseconds to play our animation
+            * Easing        - Easing indicates transistion effect which will be applied to animation
+            * Complete      - Here we can provide a callback function to execute soon after animation finishes.
+        Syntax:
+                .animate(properties[, duration][, easing][, complete])
+
+    ====================================Regular Expression ================================================
+
+    ^ = starts with
+    $ = ends with
+    . = Any Character
+    + = one or more
+    \ = Escape Special Characters
+    ? = Zero or More Characters
+
+    =====================================Event Handling===================================================
+
+    $('Element').bind('event', function(){
+
+    })
+    similary, remove the events binded early ==>   $('Element').unbind();
+
+    $('Element').on('click', function(event){
+
+    })
+    ================Extra Information================
+    $(document).on('click', function(event){
+        console.log(event.type);        The Event type eg. 'Click'
+        console.log(event.which);       The Button or Key that was Pressed
+        console.log(event.target);      The originating element
+        console.log(event.pageX);       The document mouse X Coordinate
+        console.log(event.pageY);       The document mouse Y Coordinate
+
+        event.preventDefault(); Helps us to avoid the default event attached to the element
+            eg: clicking the nav-link and redirecting to other page.
+
+        event.stopPropogation() = It is used to avoid triggering events all the way up to the DOM we can use
+                                        .stopPropogation().
+
+        $('element').one('click', function(){}) => This type of events only works single time.
+
+        $('element').off('click', function(){});    While using ion and off define the functional Method outside
+                                                    the executioion block of on/off and pass the reference of it.
+        
+    })
+
+        ==========      Trigger Events      =============
+
+        $('element').trigger('event');
+
+        ==========      Custom Events       =============
+
+
+        $('element').bind('customEvent', function(){
+            // You Code goes here........
+        })
+
+        $('element').trigger('customEvent'); // we have to trigger the event bu ourself because this event is not defined in HTMl\
+    
+-->

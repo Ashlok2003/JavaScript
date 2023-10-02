@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- JQuery CDN (Content Delivery Network) Integration -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.css">
+    <style>
+        #json-container {
+            background-color: #333;
+            /* Dark background color */
+            color: #fff;
+            /* Light text color */
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Ajax - using JQuery</h2>
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+        <li>Date</li>
+    </ul>
+    <p id="pra">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quaerat dignissimos nisi impedit velit soluta
+        voluptates quidem provident rem beatae.
+    </p>
+    <button id="btn">Click ME!</button>
+    <pre id="json-container"><code class="language-json"></code></pre>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-json.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            /*----------------------------AJAX----------------------------------------*/
+            $.ajax({
+                url: 'https://jsonplaceholder.typicode.com/posts',
+                type: 'GET',
+                dataType: 'json',
+                timeout: 2500,
+
+                success: function (result) {
+                    console.log('Complete with', result);
+                },
+                error: function (error) {
+                    console.log('Complete with Error ', error);
+                },
+                complete: function () {
+                    console.log('Completed');
+                }
+            });
+
+            // GET Method
+            $.get('https://jsonplaceholder.typicode.com/posts',
+                {},
+                function (response) {
+                    console.log('Request Completed!');
+                    console.log(response);
+                },
+                'json'
+            );
+
+            // getJSON method
+            $.getJSON('https://jsonplaceholder.typicode.com/posts', {}, function (response) {
+                console.log('Getting Response !', response);
+            });
+
+
+            $.getJSON('https://jsonplaceholder.typicode.com/posts', { userId: 1, limit: 10 }, function (response) {
+                console.log('Getting Response !', response);
+                $('#json-container code').text(JSON.stringify(response, null, 2));
+                Prism.highlightElement($('#json-container code')[0]);
+            });
+
+        });
+        /*------------------------------------------------------------------------*/
+
+        $(document).ready(() => {
+            let names = ['Ashlok', 'Chaudhary'];
+            let x = $.map(names, (pername, perIndex) => {
+                return pername.split('');
+            })
+            console.log(x);
+        })
+
+        const x = "         hello      Ashlok !      ";
+        console.log($.trim(x));
+        console.log($.isFunction($.each));
+
+        $('li').filter(function (index) {
+            return $(this).text().length > 5;
+        }).css('color', 'blue');
+        /*------------------------------------------------------------------------*/
+
+        console.log($.isPlainObject({ 'ashlok': 'Chaudhary' }));
+        console.log($.isEmptyObject({ 'ashlok': 'Chaudhary' }));
+        console.log($.isArray({ 'ashlok': 'Chaudhary' }));
+
+        /*---------------------------Deferred Objects -------------------------------*/
+
+        /*--------------------------No Conflict Method-------------------------------*/
+        /* $.noConflict(); // After this we just have to change the $ = jQuery to proceed with jQuery further
+        // Actually this is used where any other method is using $ for operrational. 
+        jQuery('#btn').click(() => {
+            jQuery('#pra').text("Hello Ashlok");
+        }) 
+                naming convections is also available 
+        let x = $.noConflict();
+         x('#btn').click(() => {
+            x('#pra').text("Hello Ashlok");
+        })
+        
+        */
+        /*---------------------------------------------------------------------------*/
+        /*---------------------------------------------------------------------------*/
+        /*---------------------------------------------------------------------------*/
+        /*---------------------------------------------------------------------------*/
+    </script>
+</body>
+
+</html>
+
+<!--
+    Content Regarding Jquery
+
+    Some of the methods in JQuery
+        $.get()
+        $.getScript()
+        $.getJSON()
+        $.post()
+        $().load()
+
+    JQuery AJAX (Contd..)
+        async, cache, complete, data, dataType, error, jsonp, success, timeout, type, url
+
+
+    Deferred Object in JQuery
+
+        * A Deferred object describes the state of avilability of something and offers a nice interface to help when that
+            state changes.
+
+        * A Deferred object starts in a pending state, this means it is not yet completed 
+
+        * Deferred Object has two important methods: 
+                resolve
+                reject
+
+        * jQuery ajax() method will call resolve() on the deferred object and it returns when request is successful and
+            call reject() when request is failure.
+
+        * Both resolve() & reject() can be manually executed on any manually created deferred object.
+
+        # deferred Object has three important events or way to attach a callback functions.
+            * done
+            * fail
+            * Always
+        * Deferred Object allows multiple listeners to Ajax events without manually calling chaining callbacks
+
+        --------------------------------Caching the Data -----------------------------------------------
+        * Helpfull when we are about to makde a call again and again it increase time and store the data.
+-->

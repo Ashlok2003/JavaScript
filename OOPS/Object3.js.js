@@ -30,3 +30,22 @@ console.log(Object.isExtensible(sealed));
 const frozen = Object.freeze({});
 console.log(Object.isFrozen(frozen));
 console.log(Object.isExtensible(frozen));
+
+/*  
+        Difference of Debounce and Throttle
+
+- **Debounce** delays the execution of a method for a specific amount of 
+    time after the last event occurrence. It doesn't hide the existence of 
+    the method but postpones its execution until a period of inactivity occurs. 
+    It's useful for ensuring that a function is only called after a user has 
+    paused their activity, such as typing in a search bar.
+
+- **Throttle** controls the rate at which a method is executed by enforcing a 
+    fixed time interval between executions. It doesn't hide the method but limits 
+    how frequently it can be invoked. It's useful for regulating the pace of 
+    function calls, especially in situations like scroll or resize events.
+
+    So, both debounce and throttle affect when and how often a method is called, 
+    but they do so in slightly different ways to achieve specific timing behaviors.
+
+*/

@@ -4,6 +4,7 @@
 
 Hello there! 👋 This is my personal GitHub repository where I organize and share my JavaScript-based projects and study materials.
 
+   1. Clone this repository to your local machine:
     ```bash
-    npm install
+    git clone https://github.com/your-username/project-name.git
     ```
